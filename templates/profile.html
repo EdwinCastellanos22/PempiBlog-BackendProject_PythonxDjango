@@ -1,0 +1,86 @@
+{% extends 'main.html' %}
+
+{% block title %} Profile {% endblock %}
+
+{% block head %}
+    <style>
+        body{
+            background-color: black;
+            margin-top: 20px;
+            color: white;
+        }
+        .avatar{
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+{% endblock%}
+
+{% block content %}
+
+    <div class="container boostrap snippets bootdey">
+
+        <h1 class="text-primary"> Editar Perfil </h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+
+                <div class="text-center">
+                    <img src="{{ request.user.profile.image.url }}" class="avatar img-circle" alt="foto de perfil">
+                </div>
+                <h6>Subir una foto diferente</h6>
+                <form class="form-horizontal" role="form" method="post" action="/upimage/">
+                    {% csrf_token %}
+                    <input type="file" class="form-control" id="image" name="image">
+                    <button type="submit" class="btn btn-success mt-2">Subir</button>
+                </form>
+
+            </div>
+
+            <div class="col-md-9 personal-info">
+
+                <h3>Informacion Personal</h3>
+
+                <form class="form-horizontal" role="form" method="post" action="/upprofile/">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username" class="col-lg-3 control-label">Usuario</label>
+                        <div class="col-lg-8">
+                        <input type="text" class="form-control" value="{{ request.user.username }}" name="username" id="username">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="first_name" class="col-lg-3 control-label">Nombre</label>
+                        <div class="col-lg-8">
+                        <input type="text" class="form-control" value="{{ request.user.first_name }}" name="first_name" id="first_name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name" class="col-lg-3 control-label">Apellido</label>
+                        <div class="col-lg-8">
+                        <input type="text" class="form-control" value="{{ request.user.last_name }}" name="last_name" id="last_name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-lg-3 control-label">Correo</label>
+                        <div class="col-lg-8">
+                        <input type="email" class="form-control" value="{{ request.user.email }}" name="email" id="email">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Actualizar</button>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

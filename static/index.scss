@@ -1,0 +1,84 @@
+$color: rgb(212, 86, 28);
+$backForm: white;
+$backgli: #f9f8f8;
+$headline: #222222;
+
+
+body{
+    background-color: black;
+    margin: 5px;
+    font-family: monospace;
+}
+
+.titulo{
+    font-family: 'Baloo Tamma', cursive;
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    color: white;
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-shadow: -1px -1px 0px $color,
+        3px 3px 0px cadetblue,
+        6px 6px 0px cadetblue;
+}
+
+.welcome{
+    margin: 1em 0 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    z-index: 2;
+}
+
+
+
+.posts{
+    padding-top: 10px;
+    background: #1abc9c;
+    margin-top: 10px;
+    transition: .3s ease;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+.posts:hover{
+        box-shadow: 0px 5px 20px rgba(0,0,0,.8);
+        transform: translateY(-10px) scale(1.02);
+}
+
+.tpost{
+    position: relative;
+    width: 100%;
+    h1{
+        font-size: 4rem;
+        color: $headline;
+        text-align: center;
+        margin-top: 0;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+}
+
+.glitch{
+    position: relative;
+    width: 100%;
+    color: $headline;
+    transform: translateY(-120%);
+    text-shadow: 2px 0 $backgli,
+        -1px 0 yellow,
+        -2px 0 green;
+        animation: glitch 2500ms infinite linear alternate-reverse;
+}
+
+#newPost {
+    input{
+        background-color: gray;
+    }
+}
+
+.cmn-divfloat{
+    position: fixed !important;
+    bottom: 45px;
+    right: 15px;
+}
