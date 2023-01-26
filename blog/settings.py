@@ -50,7 +50,7 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/pempi2022/blog/templates/'],
+        'DIRS': ['/home/pempi/Documentos/PempiBlog-BackendProject_PythonxDjango/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,10 +124,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/pempi2022/blog/media'
+MEDIA_ROOT = '/home/pempi/Documentos/PempiBlog-BackendProject_PythonxDjango/media'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/pempi2022/blog/static'
+STATIC_ROOT = '/home/pempi/Documentos/PempiBlog-BackendProject_PythonxDjango/static'
 
 
 LOGIN_URL= '/login/'

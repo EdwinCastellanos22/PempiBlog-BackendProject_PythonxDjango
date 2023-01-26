@@ -8,8 +8,8 @@ from django.conf.urls import handler500, handler404
 from django.contrib.auth.views import LoginView, LogoutView
 from blog1.views import register, index, home, about, contact, profile, update_image, update_profile, save
 
-handler404= 'app1.views.error_404'
-handler500= 'app1.views.error_500'
+handler404= 'blog1.views.error_404'
+handler500= 'blog1.views.error_500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
